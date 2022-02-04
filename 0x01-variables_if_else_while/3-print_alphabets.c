@@ -8,18 +8,18 @@
  */
 int main(void)
 {
-int n = 97;
-while (n < 123)
+int charValue;
+for (charValue = 97; charValue <= 122; charValue++)
 {
-putchar(n);
-n++;
+putchar(charValue);
 }
-int a = 65;
-while (a < 91)
+for (charValue = 65; charValue <= 90; charValue++)
 {
-putchar(n);
-a++;
-}
+putchar(charValue);
+if (charValue == 90)
+{
 putchar('\n');
+}
+}
 return (0);
 }
