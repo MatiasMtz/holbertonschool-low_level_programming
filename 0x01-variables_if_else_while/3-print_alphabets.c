@@ -6,18 +6,15 @@
  */
 int main(void)
 {
-int charValue;
-for (charValue = 97; charValue <= 122; charValue++)
+char a;
+for (a = 97; a <= 122; a++)
 {
-putchar(charValue);
+putchar(a);
 }
-for (charValue = 65; charValue <= 90; charValue++)
+for (a = 65; a <= 90; a++)
 {
-putchar(charValue);
-if (charValue == 90)
-{
+putchar(a);
+}
 putchar('\n');
-}
-}
 return (0);
 }
