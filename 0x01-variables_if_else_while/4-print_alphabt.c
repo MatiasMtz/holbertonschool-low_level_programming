@@ -8,12 +8,13 @@
  */
 int main(void)
 {
-int n = 97;
-while (n < 123)
-if (n != 101 && n != 113)
+char n;
+for (n = 'a'; n <= 'z'; n++)
+{
+if (!((n == 'q') || (n == 'e')))
 {
 putchar(n);
-n++;
+}
 }
 putchar('\n');
 return (0);
