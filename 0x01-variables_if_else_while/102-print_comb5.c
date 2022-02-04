@@ -1,38 +1,33 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
+ * main - prints things
  *
- * Return: Always 0 (Success)
+ * Return: 0 success
  */
 int main(void)
 {
-int n;
-int l;
-for (n = 0 ; n <= 9; n++)
+int n = 0, l = 0, first;
+int x = 0, z = 1, second;
+for (first = 0; first < 100; first++)
 {
-for (l = 0 ; l <= 9 ; l++)
+n = first / 10;
+l = first % 10;
+for (second = 0; second < 100; second++)
 {
-if ((n != l) && (n < l))
+x = second / 10;
+z = second % 10;
+if (first != second && first < second)
 {
-putchar(n % 10 + '0');
-putchar(l % 10 + '0');
-if (n != 8)
+putchar(n + '0');
+putchar(l + '0');
 putchar(' ');
-for (n = 0 ; n <= 9; n++)
-{
-for (l = 0 ; l <= 9 ; l++)
-{
-if ((n != l) && (n < l))
-{
-putchar(n % 10 + '0');
-putchar(l % 10 + '0');
-if (n != 8)
+putchar(x + '0');
+putchar(z + '0');
+if (first != 98 || second != 99)
 {
 putchar(',');
 putchar(' ');
-}
-}
-}
 }
 }
 }
