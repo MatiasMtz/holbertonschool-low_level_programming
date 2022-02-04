@@ -8,11 +8,10 @@
  */
 int main(void)
 {
-int n = 122;
-while (n > 96)
+char l;
+for (l='a'; l >='a'; l++)
 {
-putchar(n);
-n++;
+putchar(l);
 }
 putchar('\n');
 return (0);
