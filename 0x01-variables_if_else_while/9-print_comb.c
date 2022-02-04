@@ -6,15 +6,17 @@
  */
 int main(void)
 {
-char n;
-for (n = 'a'; n <= 'z'; n++)
+int n;
+n = 0;
+do {
+putchar(n % 10 + '0');
+if (n != 9)
 {
-putchar(n);
+putchar(',');
+putchar(' ');
 }
-for (n = 'A'; n <= 'Z'; n++)
-{
-putchar(n);
-}
+n++;
+} while (n < 10);
 putchar('\n');
 return (0);
 }
