@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#define  LENGTH 80
+#include <main.h>
 /**
  * main - Entry point.
  * Putchar - writes a character to stdout.
@@ -8,8 +6,15 @@
  */
 int main(void)
 {
-	int i, ch;
-	char buffer[LENGTH + 1] = "_putchar\n";
+	int i = 0;
+	char _putchar[] = "putchar";
+
+	while (_putchar[i] != '\0')
+	{
+		_putchar([i]);
+		i++;
+	}
+	_putchar('\n')
 
 	return (0);
 }
