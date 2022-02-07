@@ -1,17 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 /**
- *print_last_digit - prints last digit.
- *@n: variable.
+ *print_last_digit - last digit.
+ *@c: variable.
  *Putchar - writes a character to stdout.
  *Return: 0 if upper, 1 if lower.
  */
-int print_last_digit(int n)
+int print_last_digit(int c)
 {
-if (n < 0)
+int n;
+if (c == -2147483648)
+c = 88;
+if (c < 0)
 {
-n = n *(-1);
+c = -c;
 }
+n = c % 10;
 _putchar(n % 10 + '0');
-return (n % 10);
+return (n);
 }
