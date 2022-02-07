@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * add - jaksd
- * @a: asda
- * @b: asds
- * Return: sada
+ * add - contains two integers
+ * @a: int one.
+ * @b: int two.
+ * Return: it contains the result
  */
 int add(int a, int b)
 {
-	int x;
-	x = a + b;
-	return (x);
+int x;
+x = a + b;
+return (x);
 }
