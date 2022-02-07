@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * main - Entry point.
  * Putchar - writes a character to stdout.
@@ -6,15 +6,12 @@
  */
 int main(void)
 {
-	int i = 0;
-	char _putchar[] = "putchar";
-
-	while (_putchar[i] != '\0')
+	int i;
+	char string[] = "_putchar";
+	for (i = 0; i < 8; i++)
 	{
-		_putchar([i]);
-		i++;
+		_putchar(string[i]);
 	}
-	_putchar('\n')
-
+	_putchar('\n');
 	return (0);
 }
