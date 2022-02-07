@@ -5,17 +5,17 @@
  */
 int main(void)
 {
-unsigned long int i, sum = 0;
-for (i = 0 ; i <= 1023; i++)
+int main(void)
 {
-if ((i % 5 == 0) || (i % 3 == 0))
+int i, sum;
+for (i = 0; i < 1024; i++)
 {
-sum = sum + i;
+if (i % 3 == 0 || i % 5 == 0)
+{
+sum += i;
 }
 }
-{
-putchar(i);
-putchar('\n');
+printf("%d\n", sum);
 return (0);
 }
 }
