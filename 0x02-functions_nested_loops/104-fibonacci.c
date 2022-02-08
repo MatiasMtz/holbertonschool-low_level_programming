@@ -13,12 +13,12 @@ double n1, n2, f;
 n1 = 1;
 n2 = 2;
 printf("%.0f, %.0f, ", n1, n2);
-for (pos = 1; pos <= 96; pos++)
+for (pos = 1; pos <= 97; pos++)
 {
 f = n1 + n2;
 n1 = n2;
 n2 = f;
-if (pos != 96)
+if (pos != 97)
 printf("%.0f, ", f);
 else
 printf("%.0f\n", f);
