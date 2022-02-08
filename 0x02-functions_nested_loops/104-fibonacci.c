@@ -1,49 +1,62 @@
 #include <stdio.h>
-
 /**
-*main - printing the first 98 Fibonacci numbers starting with 1 and 2
-*
-*Return: return 0 if success.
+* numlength - returns the lenth of string
+* @num : operand number
+* Return: number of digits
 */
+int numlength(int num)
+{
+int length = 0;
 
+if (!num)
+{
+return (1);
+}
+while (num)
+{
+num = num / 10;
+length += 1;
+}
+
+
+return (length);
+}
+/**
+* main - prints the first 98 fibonacci sequences starting with 1 and 2
+*
+* Return: 0
+*/
 int main(void)
 {
-long int i, f, s, n, h2, h1, h3, h4, h0, h5;
+unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f1o = 0, f2o = 0, tmpo = 0;
+short int i = 1, initial0s;
 
-f = 0;
-s = 1;
-i = 0;
-while (i < 91)
+while (i <= 98)
 {
-n = f + s;
-f = s;
-s = n;
-printf("%ld", n);
-printf(",");
-printf(" ");
-i++;
+if (f1o > 0)
+printf("%lu", f1o);
+initial0s = numlength(mx) - 1 - numlength(f1);
+while (f1o > 0 && initial0s > 0)
+{
+printf("%i", 0);
+initial0s--;
 }
+tmp = (f1 + f2) % mx;
+tmpo = f1o + f2o + (f1 + f2) / mx;
 
-h4 = f / 1000000000;
-h3 = f % 1000000000;
-h2 = s / 1000000000;
-h1 = s % 1000000000;
-while (i < 93)
-{
-h0 = h4 + h2;
-h5 = h3 + h1;
-printf("%ld%ld", h0, h5);
-if (i != 92)
-{
-printf(",");
-printf(" ");
-}
-h4 = h2;
-h3 = h1;
-h2 = h0;
-h1 = h5;
-i++;
-}
+f1 = f2;
+
+f1o = f2o;
+
+f2 = tmp;
+
+f2o = tmpo;
+
+if (i != 98)
+printf(", ");
+else
 printf("\n");
+i++;
+}
 return (0);
 }
