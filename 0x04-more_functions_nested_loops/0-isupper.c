@@ -1,4 +1,4 @@
-0;10;1c#include "main.h"
+#include "main.h"
 /**
  * _isupper - check the code.
  * @c: variable.
@@ -6,7 +6,7 @@
  */
 int _isupper(int c)
 {
-if (c >= 65 ; c < 91)
+if (c >= 65 && c < 91)
 {
 return (1);
 }
