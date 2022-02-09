@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
- * _isdigit - check the code.
- * @c: variable.
- * Return: Always 0.
+ * _isdigit - returns the largest of 3 numbers
+ * @c: third integer
+ * Return: largest number
  */
+
 int _isdigit(int c)
 {
 if (c >= '0' && c <= '9')
