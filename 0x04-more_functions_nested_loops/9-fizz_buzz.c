@@ -1,35 +1,36 @@
-#include "stdio.h"
-
+#include <stdio.h>
 /**
- * main - check the code
- * Return: Always 0.
- */
+*main - Prints out a string to 10.
+*Return: Returnn.
+*/
 int main(void)
 {
-	int n;
-	for (n = 1; n < 101 ; n++)
-	{
-		if (n % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (n % 5 == 0)
-		{
-			printf("Buzz");
-		}
-		else if (n % 15 == 0)
-		{
-			printf("FizzBuzz");
-		}
-		else
-		{
-			printf("%d",n);
-		}
-		if (n < 100)
-		{
-		printf(" ");
-		}
-	}
-	printf("\n");
-	return (0);
+int n = 100;
+int i;
+
+for (i = 1; i <= n; i++)
+{
+if (i % 15 == 0)
+{
+printf("FizzBuzz");
+}
+else if (i % 3 == 0)
+{
+printf("Fizz");
+}
+else if (i % 5 == 0)
+{
+printf("Buzz");
+}
+else
+{
+printf("%d", i);
+}
+if (i < 100)
+{
+printf(" ");
+}
+}
+printf("\n");
+return (0);
 }
