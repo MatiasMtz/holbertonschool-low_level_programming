@@ -11,31 +11,30 @@ void rev_string(char *s)
 	int a;
 	int b = 0;
 	char string[] = "";
+
 	b = length - 1;
-	for (a = 0 ; a < j; b++)
+	for (a = 0 ; a < b; a++)
 	{
 		string[0] = s[b];
 		s[b] = s[a];
 		s[a] = string[0];
-		i--;
+		b--;
 	}
 }
 
 /**
- * _strlen - gives the num of characters.
- * @s: pointer to s.
- * Return: length if success
+ * _strlen - check the code
+ * @s: pointer to a
+ * Return: length if success.
  */
 int _strlen(char *s)
 {
-	int cont = 0;
-	char l = '0';
-	if (*s == '\0')
-		return (0);
-	while (l != '\0')
+	int length = 0;
+
+	while (*s != '\0')
 	{
-		cont++;
-		l = *(s + cont);
+		length++;
+		s++;
 	}
-	return (cont);
+	return (length);
 }
