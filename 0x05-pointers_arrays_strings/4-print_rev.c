@@ -2,20 +2,33 @@
 
 /**
  * print_rev - check the code
- * @s: pointer to the variable.
+ * _strlen - Count characters.
+ * @s: pointer to a variable.
  */
 void print_rev(char *s)
 {
-	int i;
-	int rev2;
-	int reverse = 0;
+	int a;
 
-	for (i = 0; s[i] != '0'; i++)
+	for (a = _strlen(s) - 1; a >= 0; a--)
 	{
-		rev2 = i % 10;
-		reverse = reverse * 10 + rev2;
-		i /= 10;
+		_putchar(s[a]);
 	}
-	_putchar(reverse);
 	_putchar('\n');
+}
+
+/**
+ * _strlen - check the code
+ * @s: pointer to a
+ * Return: length if success.
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
 }
