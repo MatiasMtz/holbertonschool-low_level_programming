@@ -1,13 +1,12 @@
 #include "main.h"
 /**
-  * main - check the code
-  *
+  * swap_int - check the code
+  * @a: pointer to a
+  * @b: pointer to b
   */
 void swap_int(int *a, int *b)
 {
-	int *p = a;
-	int *point = b;
-
-	*p = b;
-	*point = a;
+	int swap = *a;
+	*a = *b;
+	*b = swap;
 }
