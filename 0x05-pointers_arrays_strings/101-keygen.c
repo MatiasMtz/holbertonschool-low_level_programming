@@ -1,61 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
-/**
- * randomizer - function to randomize
- * @n: integer
- */
-void randomizer(int n)
-{
-	int i = 0;
-	int random = 0;
-	char numbers[] = "0123456789";
-	char lower[] = "abcdefghijklmnoqprstuvwyzx";
-	char upper[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-	char symbols[] = "!@#$^&*?";
-	char password[] = "";
 
-	srand((unsigned int)(time(0)));
-	random = rand() % 4;
-
-	for (i = 0; i < n; i++)
-	{
-		if (random == 1)
-		{
-			password[i] = numbers[rand() % 10];
-			random = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (random == 2)
-		{
-			password[i] = symbols[rand() % 8];
-			random = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (random == 3)
-		{
-			password[i] = upper[rand() % 26];
-			random = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else
-		{
-			password[i] = lower[rand() % 26];
-			random = rand() % 4;
-			printf("%c", password[i]);
-		}
-	}
-}
 /**
- * main - main function.
- * Return: return value of dest.
- */
+* main - passwords for the program 101-crackme.
+* Return: Always 0.
+*/
 int main(void)
 {
-	int n = 10;
+	char pass[84];
+	int a = 0, sum = 0, x, y;
 
-	randomizer(n);
+		srand(time(0));
 
+	while (sum < 2772)
+	{
+		pass[a] = 33 + rand() % 94;
+		sum += pass[a++];
+	}
+	pass[a] = '\0';
+	if (sum != 2772)
+	{
+		x = (sum - 2772) / 2;
+		y = (sum - 2772) / 2;
+		if ((sum - 2772) % 2 != 0)
+			x++;
+		for (a = 0; pass[a]; a++)
+		{
+			if (pass[a] >= (33 + x))
+			{
+				pass[a] -= x;
+				break;
+			}
+		}
+		for (a = 0; pass[a]; a++)
+		{
+			if (pass[a] >= (33 + y))
+			{
+				pass[a] -= y;
+				break;
+			}
+		}
+	}
+	printf("%s", pass);
 	return (0);
 }
