@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * *cap_string - check the code
  * @s: First variable.
