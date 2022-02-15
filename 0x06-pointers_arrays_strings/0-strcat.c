@@ -1,37 +1,25 @@
 #include "main.h"
 /**
- * *_strcat - check the code
- * @dest:  Pointers to src
- * @src: pointer to a variable.
- * Return: Retorno
- */
+* *_strcat - check the code
+* @dest:  Pointers to src
+* @src: pointer to a variable.
+* Return: Retorno
+*/
 char *_strcat(char *dest, char *src)
 {
-	int i;
 	int n = 0;
-	int length = _strlen(dest);
+	int i = 0;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	while (dest[n] != '\0')
 	{
-		dest[length + i] = src[i];
-		dest[length + i] = '\0';
+		n++;
 	}
+	while (src[i] != '\0')
+	{
+		dest[n] = src[i];
+		n++;
+		i++;
+	}
+	dest[n] = '\0';
 	return (dest);
-}
-
-/**
- * _strlen - check the code
- * @s: pointer to a
- * Return: length if success.
- */
-int _strlen(char *s)
-{
-	int length = 0;
-
-	while (*s != '\0')
-	{
-		length++;
-		s++;
-	}
-	return (length);
 }
