@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * *_strcmp - check the code
- * @s1;  Pointer.
+ * @s1:  Pointer.
  * @s2: pointer.
  * Return: success or fail.
  */
@@ -15,7 +15,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		n++;
 	}
-	while (s2 [x] != '\0')
+	while (s2[x] != '\0')
 	{
 		x++;
 	}
