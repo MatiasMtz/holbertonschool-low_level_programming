@@ -2,7 +2,7 @@
 /**
  * *cap_string - check the code
  * @s: First variable.
- * Return: Retorno
+ * Return: all words capitalized.
  */
 char *cap_string(char *s)
 {
