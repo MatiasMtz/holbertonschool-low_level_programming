@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strspn - locates a character in a string.
+ * *_strpbrk - locates a character in a string.
  * @s: pointer to s, where is the string.
  * @accept: bytes we want to locate.
  * Return: 0 if success.
