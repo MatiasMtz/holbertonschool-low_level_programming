@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * set_string - function that prints the sum of the two diagonals.
- * @a: Pointer.
- * @size: size of the matrix.
+ * @s: Pointer.
+ * @to: char.
  */
 void set_string(char **s, char *to)
 {
