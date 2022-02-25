@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	{
 		if (n >= 25)
 			n -= 25;
-	     	else if (n >= 10)
+		else if (n >= 10)
 			n -= 10;
 		else if (n >= 5)
 			n -= 5;
