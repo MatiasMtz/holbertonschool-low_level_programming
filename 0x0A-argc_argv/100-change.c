@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 			count -= 5;
 		else if (n >= 2)
 			count -= 2;
-		else if (n >= 1)
+		else
 			count -= 1;
 	}
 	printf("%d\n", count);
