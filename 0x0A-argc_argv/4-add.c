@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * main - program that adds positive numbers.
+ * main - adds positive numbers.
  * @argc: argument count.
  * @argv: argument vector.
+ * Return: 0 if success, 1 if error
  */
 int main(int argc, char *argv[])
 {
