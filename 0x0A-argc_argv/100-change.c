@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	if (n < 0)
 	{
 		printf("0\n");
+		return (0)
 	}
 	for (count = 0; n > 0; count++)
 	{
