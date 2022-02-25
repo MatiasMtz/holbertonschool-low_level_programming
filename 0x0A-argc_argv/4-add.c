@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	else
 		for (count = 1; count < argc; count++)
 		{
-			for (letter = 0; letter < strlen(argv[count]);
+			for (letter = 0; letter < (int)strlen(argv[count]);
 			     letter++)
 			{
 				if (!((argv[count][letter] >= '0') &&
