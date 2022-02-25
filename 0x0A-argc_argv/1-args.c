@@ -4,12 +4,13 @@
  * @argc: argument count.
  * @argv: argument vector.
  */
-void main(int argc, char *argv[])
+int main(int argc, char __attribute__((unused)) *argv[])
 {
 	int count = 0;
 
-	for (count > 0; count < argc; count++)
+	for (count = 0; count < argc; count++)
 	{
 		printf("%d\n", count);
 	}
+	return (0);
 }
