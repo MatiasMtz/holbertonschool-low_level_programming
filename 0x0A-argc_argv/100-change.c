@@ -26,15 +26,15 @@ int main(int argc, char *argv[])
 	for (count = 0; n > 0; count++)
 	{
 		if (n >= 25)
-			count -= 25;
-		else if (n >= 10)
-			count -= 10;
+			n -= 25;
+	     	else if (n >= 10)
+			n -= 10;
 		else if (n >= 5)
-			count -= 5;
+			n -= 5;
 		else if (n >= 2)
-			count -= 2;
+			n -= 2;
 		else
-			count -= 1;
+			n -= 1;
 	}
 	printf("%d\n", count);
 	return (0);
