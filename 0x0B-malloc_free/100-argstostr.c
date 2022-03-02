@@ -4,6 +4,7 @@
  * *argstostr - concatenates all the arguments of your program..
  * @ac: argument count.
  * @av: argument vector.
+ * Return: str.
  */
 char *argstostr(int ac, char **av)
 {
@@ -17,7 +18,7 @@ char *argstostr(int ac, char **av)
 	}
 	for (n = 0; n < ac; n++)
 	{
-		length += (_strlen(av[n]) + 1);
+		length += _strlen(av[n]);
 	}
 	str = malloc((length + 1) * sizeof(char));
 	str[0] = '\0';
