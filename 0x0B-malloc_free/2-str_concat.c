@@ -14,10 +14,6 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	char *a;
 
-	str1 = _strlen(s1);
-	str2 = _strlen(s2);
-	str3 = str1 + str2 + 1;
-	a = malloc(str3);
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -26,6 +22,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+	str1 = _strlen(s1);
+	str2 = _strlen(s2);
+	str3 = str1 + str2 + 1;
+	a = malloc(str3);
 	if (a == NULL)
 	{
 		return (NULL);
