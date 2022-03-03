@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * string_nconcat - Multiplies two numbers.
- * @s1: Pointer to a first string
- * @s2: Pointer to a second string
- * @n: Variable
+ * *_realloc - reallocates a memory block.
+ * @ptr: pointer to the memory previously allocated. Calls malloc(old_size).
+ * @old_size: size, in bytes, of the allocated space for ptr.
+ * @new_size: new size, in bytes of the new memory block.
  * Return: Return
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -23,21 +23,21 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		if (s == NULL)
 		{
 			free(s);
-			return(NULL);
+			return (NULL);
 		}
 		free(ptr);
-		return(s);
+		return (s);
 	}
 	if (ptr != NULL && new_size == 0)
 	{
 		free(ptr);
-		return(NULL);
+		return (NULL);
 	}
 	n = malloc(new_size);
 	if (n == NULL)
 	{
 		free(ptr);
-		return(NULL);
+		return (NULL);
 	}
 	s = ptr;
 	while (i < old_size)
@@ -46,5 +46,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		i++;
 	}
 	free(ptr);
-	return(n);
+	return (n);
 }
