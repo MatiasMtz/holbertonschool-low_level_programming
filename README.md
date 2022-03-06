@@ -14,7 +14,7 @@ Introduction to function declarations and definitions, scope of variables and ne
 - [0x03-debugging](https://github.com/MatiasMtz/holbertonschool-low_level_programming/tree/main/0x03-debugging)
 Introduction to debugging and troubleshooting C programs.
 - [0x04-more_functions_nested_loops](https://github.com/MatiasMtz/holbertonschool-low_level_programming/tree/main/0x04-more_functions_nested_loops)
-Expanding on concepts introduced in 0x01. C - Variables, if, else, while) and 0x02. C - Functions, nested loops.
+Expanding on concepts like variables, if, else, while, functions and nested loops. Exercises 0x01 and 0x02.
 - [0x05-pointers_arrays_strings](https://github.com/MatiasMtz/holbertonschool-low_level_programming/tree/main/0x05-pointers_arrays_strings)
 Introduction to pointers and array navigation.
 - [0x06-pointers_arrays_strings](https://github.com/MatiasMtz/holbertonschool-low_level_programming/tree/main/0x06-pointers_arrays_strings)
