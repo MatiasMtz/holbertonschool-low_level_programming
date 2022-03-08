@@ -1,0 +1,16 @@
+#include "dog.h"
+#include <stdlib.h>
+/**
+ * dog - name of the struct
+ * @name: parameter for struct "dog"
+ * @age: parameter for struct "dog"
+ * @owner: parameter for struct "dog"
+ *
+ * Description: Longer description
+ */
+void dog(struct dog *c, char *name, float age, char *owner)  
+{	
+	c->name= name;
+	c->age= age;
+	c->owner= owner;
+}
