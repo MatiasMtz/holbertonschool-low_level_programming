@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *nmeew_dog - function to print second dog data
+ * *new_dog - function to print second dog data
  * @name: second dog name
  * @age: second dog age
  * @owner: second dog owner
