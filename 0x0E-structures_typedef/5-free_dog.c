@@ -1,5 +1,5 @@
 #include "dog.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * free_dog - function to print dog data
  * @d: pointer variable
@@ -12,6 +12,6 @@ void free_dog(dog_t *d)
 	}
 	else
 	free(d->name);
-	free(d->age);
 	free(d->owner);
+	free(d);
 }
