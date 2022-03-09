@@ -5,7 +5,7 @@
  * @array: pointer to the start of the array
  * @size: array size.
  * @cmp: compares values
- * return: -1 if error
+ * Return:  -1 if error
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
