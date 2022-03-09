@@ -9,11 +9,11 @@ void print_name(char *name, void (*f)(char *))
 {
 	if (name == NULL)
 	{
-		return;
+		return (NULL);
 	}
 	if (f == NULL)
 	{
-		return;
+		return (NULL);
 	}
 	f(name);
 }
