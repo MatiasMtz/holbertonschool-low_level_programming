@@ -5,7 +5,7 @@
  * print_string - Pritns strings
  * @args: Arguments
   */
-void print_string(va_list args)
+void print_string(char *space, va_list args)
 {
 	char *a;
 
@@ -14,31 +14,31 @@ void print_string(va_list args)
 	{
 		printf("(nil)");
 	}
-	printf("%s", a);
+	printf("%s%s", space, a);
 }
 /**
  * print_number - Print number
  * @args: Arguments.
  */
-void print_number(va_list args)
+void print_number(char *space, va_list args)
 {
-	printf("%d", va_arg(args, int));
+	printf("%s%i", space, va_arg(args, int));
 }
 /**
 * print_char - Print character
 * @args: Arguments.
 */
-void print_char(va_list args)
+void print_char(char *space, va_list args)
 {
-	printf("%c", va_arg(args, int));
+	printf("%s%c", space, va_arg(args, int));
 }
 /**
 * print_float - Print number
 * @args: Arguments.
 */
-void print_float(va_list args)
+void print_float(char *space, va_list args)
 {
-	printf("%f", va_arg(args, double));
+	printf("%s%f", space, va_arg(args, double));
 }
 
 /**
@@ -47,6 +47,7 @@ void print_float(va_list args)
  */
 void print_all(const char * const format, ...)
 {
+	va_list arg;
 	print_t print[] = {
 		{"s", print_string},
 		{"i", print_number},
@@ -57,12 +58,9 @@ void print_all(const char * const format, ...)
 
 	int count = 0;
 	int j = 0;
-	va_list arg;
-	char *space;
-
+	char *space = "";
+	
 	va_start(arg, format);
-	space = "";
-
 	while (format != NULL && format[j] != '\0')
 	{
 		count = 0;
@@ -70,8 +68,7 @@ void print_all(const char * const format, ...)
 		{
 			if (print[count].print[0] == format[j])
 			{
-				printf("%s", space);
-				print[count].f(arg);
+				print[count].f(space, arg);
 				space = ", ";
 			}
 			count++;
