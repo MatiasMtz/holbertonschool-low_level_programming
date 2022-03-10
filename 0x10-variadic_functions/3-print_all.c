@@ -1,12 +1,11 @@
 #include "variadic_functions.h"
-#include <stdlib.h>
+#include <stdarg.h>
 #include <stdio.h>
 /**
  * print_string - Pritns strings
  * @args: Arguments
- * 
   */
-void print_string(char *space, va_list args)
+void print_string(va_list args)
 {
 	char *a;
 
@@ -15,31 +14,31 @@ void print_string(char *space, va_list args)
 	{
 		printf("(nil)");
 	}
-	printf("%s%s", space, a);
+	printf("%s", a);
 }
 /**
  * print_number - Print number
  * @args: Arguments.
  */
-void print_number(char *space, va_list args)
+void print_number(va_list args)
 {
-	printf("%s%i", space, va_arg(args, int));
+	printf("%d", va_arg(args, int));
 }
 /**
 * print_char - Print character
 * @args: Arguments.
 */
-void print_char(char *space, va_list args)
+void print_char(va_list args)
 {
-	printf("%s%c", space, va_arg(args, int));
+	printf("%c", va_arg(args, int));
 }
 /**
 * print_float - Print number
 * @args: Arguments.
 */
-void print_float(char *space, va_list args)
+void print_float(va_list args)
 {
-	printf("%s%f", space, va_arg(args, double));
+	printf("%f", va_arg(args, double));
 }
 
 /**
@@ -48,7 +47,6 @@ void print_float(char *space, va_list args)
  */
 void print_all(const char * const format, ...)
 {
-	va_list arg;
 	print_t print[] = {
 		{"s", print_string},
 		{"i", print_number},
@@ -59,23 +57,28 @@ void print_all(const char * const format, ...)
 
 	int count = 0;
 	int j = 0;
-	char *space = "";
-	
+	va_list arg;
+	char *separator;
+
 	va_start(arg, format);
-	while (format != NULL && format[j] != '\0')
+	separator = "";
+
+	while (format != NULL && format[j])
 	{
 		count = 0;
 		while (count < 4)
 		{
 			if (print[count].print[0] == format[j])
 			{
-				print[count].f(space, arg);
-				space = ", ";
+				printf("%s", separator);
+				print[count].f(arg);
+				separator = ", ";
+				break;
 			}
 			count++;
 		}
 		j++;
 	}
-	va_end(arg);
 	printf("\n");
+	va_end(arg);
 }
