@@ -13,9 +13,9 @@ void print_string(va_list args)
 	if (a == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
 	printf("%s", a);
-	return;
 }
 /**
  * print_number - Print number
