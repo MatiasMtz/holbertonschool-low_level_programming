@@ -2,13 +2,13 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_numbers - Pritns numbers
- * @separator: Spaces
- * @n: Number that passed
+ * print_numbers - Prints numbers followed by new line
+ * @separator: spaces and commas
+ * @n: Amount of arguments
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
+	unsigned int count;
 	va_list args;
 
 	if (separator == NULL)
@@ -16,10 +16,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		return;
 	}
 	va_start(args, n);
-	for (i = 0; i < n; i++)
+	for (count = 0; count < n; count++)
 	{
 		printf("%d", va_arg(args, int));
-	if (i != (n - 1))
+	if (count != (n - 1))
 	{
 		printf("%s", separator);
 	}
