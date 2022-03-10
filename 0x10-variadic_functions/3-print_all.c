@@ -57,10 +57,11 @@ void print_all(const char * const format, ...)
 
 	int count = 0;
 	int j = 0;
-	char *space;
 	va_list arg;
+	char *space;
 
 	va_start(arg, format);
+	space = "";
 
 	while (format != NULL && format[j] != '\0')
 	{
@@ -69,14 +70,14 @@ void print_all(const char * const format, ...)
 		{
 			if (print[count].print[0] == format[j])
 			{
-				printf("%s", separator);
+				printf("%s", space);
 				print[count].f(arg);
-				separator = ", ";
+				space = ", ";
 			}
 			count++;
 		}
 		j++;
 	}
-	printf("\n");
 	va_end(arg);
+	printf("\n");
 }
