@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				print[count].f(arg);
-				separator = ", ";		
+				separator = ", ";
 			}
 			count++;
 		}
