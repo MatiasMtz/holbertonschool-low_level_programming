@@ -15,19 +15,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		return;
 	}
-	if (n <= 0)
-	{
-		return;
-	}
 	va_start(args, n);
 	for (count = 0; count < n; count++)
 	{
 		printf("%d", va_arg(args, int));
-	if (count != (n - 1))
-	{
-		printf("%s", separator);
+		if (count != (n - 1))
+		{
+			printf("%s", separator);
+		}
 	}
-	}
-	printf("\n");
 	va_end(args);
+	printf("\n");
 }
