@@ -4,7 +4,7 @@
 /**
  * print_numbers - Prints numbers followed by new line
  * @separator: spaces and commas
- * @n: Amount of arguments
+ * @n: Amount of ints passed to the function
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -12,6 +12,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list args;
 
 	if (separator == NULL)
+	{
+		return;
+	}
+	if (n == NULL)
 	{
 		return;
 	}
