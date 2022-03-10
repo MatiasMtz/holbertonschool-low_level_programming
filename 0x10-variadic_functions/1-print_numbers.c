@@ -15,7 +15,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		return;
 	}
-	if (n == NULL)
+	if (n == 0)
 	{
 		return;
 	}
