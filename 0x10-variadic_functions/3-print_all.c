@@ -15,6 +15,7 @@ void print_string(va_list args)
 		printf("(nil)");
 	}
 	printf("%s", a);
+	return;
 }
 /**
  * print_number - Print number
@@ -63,7 +64,7 @@ void print_all(const char * const format, ...)
 	va_start(arg, format);
 	separator = "";
 
-	while (format != NULL && format[j])
+	while (format != NULL && format[j] != '\0')
 	{
 		count = 0;
 		while (count < 4)
