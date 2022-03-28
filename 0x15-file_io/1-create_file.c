@@ -20,14 +20,9 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	while (text_content[countcontent] != '\0')
-	{
-		countcontent++;
-		text_content++;
-	}
 	if (text_content != NULL)
 	{
-		countwrite = write(fd, text_content, countcontent);
+		countwrite = write(fd, text_content, _strlen(text_content));
 	}
 	close(fd);
 	if (countwrite == -1)
@@ -36,3 +31,21 @@ int create_file(const char *filename, char *text_content)
 	}
 	return (1);
 }
+
+/**
+ * _strlen - function that counts characters.
+ * @s: string to count its chars.
+ * Return: length of string.
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
+}
+
