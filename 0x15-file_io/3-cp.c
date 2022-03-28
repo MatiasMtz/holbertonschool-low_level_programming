@@ -95,7 +95,7 @@ void cant_close(int aux_check, int fd_value)
 	if (aux_check == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_value);
-		exit(98);
+		exit(100);
 	}
 }
 
