@@ -34,11 +34,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buff);
 		return (0);
 	}
-	countwrite = write(0, buff, countread);
+	countwrite = write(STDOUT_FILENO, buff, countread);
 	free(buff);
 	if (countread != countwrite)
 	{
 		return (0);
 	}
-	return (countwrite);
+	return (countread);
 }
