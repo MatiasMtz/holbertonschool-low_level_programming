@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fd_from = open(argv[1], O_RDONLY);
-	doesnt_exist(fd_from, argv[2], fd_from, -1);
+	doesnt_exist(fd_from, argv[1], -1, -1);
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	cant_create(fd_to, argv[2], fd_from, -1);
 	while (_read == 1024)
@@ -25,7 +25,9 @@ int main(int argc, char *argv[])
 		doesnt_exist(_read, argv[1], fd_from, fd_to);
 		_write = write(fd_to, buff, _read);
 		if (_write != _read)
+		{
 			_write = -1;
+		}
 		cant_create(_write, argv[2], fd_from, fd_to);
 	}
 	close_from = close(fd_from);
