@@ -25,9 +25,7 @@ int main(int argc, char *argv[])
 		doesnt_exist(_read, argv[1], fd_from, fd_to);
 		_write = write(fd_to, buff, _read);
 		if (_write != _read)
-		{
 			_write = -1;
-		}
 		cant_create(_write, argv[2], fd_from, fd_to);
 	}
 	close_from = close(fd_from);
