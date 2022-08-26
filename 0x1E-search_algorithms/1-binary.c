@@ -10,7 +10,7 @@
 int binary_search(int *array, size_t size, int value)
 {
 	size_t leftArray = 0, rightArray = size - 1, middleArray, count = 0;
-	
+
 	if (array == NULL)
 		return (-1);
 	while (leftArray <= rightArray)
